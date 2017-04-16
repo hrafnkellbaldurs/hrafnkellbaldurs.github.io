@@ -5,28 +5,23 @@ module.exports = {
     entry: './src/index.js',
     output: { 
         path: __dirname, 
-        //publicPath: '/', 
+        publicPath: '/', 
         filename: 'bundle.js' 
     },
-
     module: {
         loaders: [
             {
-                test: /.jsx?$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/,
+                test: /\.jsx?$/,
                 query: {
                     presets: ['es2015', 'react']
-                }
+                },
+                exclude: /node_modules/
             }
         ]
+    },
+    devServer: {
+        historyApiFallback: true,
+        contentBase: './'
     }
-    // },
-    // resolve: {
-    //     extensions: ['', '.js', '.jsx']
-    // },
-    // devServer: {
-    //     historyApiFallback: true,
-    //     contentBase: './'
-    // }
 };
