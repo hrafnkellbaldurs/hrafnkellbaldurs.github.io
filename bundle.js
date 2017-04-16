@@ -10985,7 +10985,7 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'Hello I\'m app'
+        'Hello I\'m app 2'
       );
     }
   }]);
@@ -11090,8 +11090,6 @@ var _reducers = __webpack_require__(96);
 var _reducers2 = _interopRequireDefault(_reducers);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-alert('haha');
 
 _reactDom2.default.render(_react2.default.createElement(
   _reactRedux.Provider,
