@@ -2,6 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+var srcDir = path.join(__dirname, 'src');
+
 module.exports = {
     entry: './src/index.js',
     output: { 
@@ -9,17 +11,19 @@ module.exports = {
     },
     module: {
         rules: [
+            // JSX
             {
                 test: /\.jsx?$/,       
                 query: {
                     presets: ['es2015', 'react']
                 },         
                 loader: 'babel-loader',
-                exclude: /node_modules/
+                include: srcDir 
             },
+
+            // SCSS
             {
                 test: /\.scss$/,
-                exclude: [/node_modules/, /core.scss$/],
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
@@ -32,7 +36,15 @@ module.exports = {
                         },
                         'sass-loader'
                     ]
-                })
+                }),
+                include: srcDir
+            },
+
+            // FILES
+            {
+                test: /\.(png|jpg)$/,
+                use: 'file-loader?name=[name].[ext]&outputPath=images/',
+                include: srcDir
             }
         ]
     },

@@ -1,6 +1,16 @@
-.App-appContainer__2XnbGp {
-  width: 200px;
-  height: 100px;
-  background-color: purple; }
+body {
+  margin: 0; }
+
+.App-root__JGMyww {
+  display: flex; }
+
+.App-header__2embW2 {
+  background: #161415 url(images/header-background.jpg) no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  text-align: center; }
+  .App-header__2embW2 h2 {
+    color: white; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJidW5kbGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

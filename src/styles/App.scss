@@ -1,5 +1,22 @@
-.appContainer {
-    width: 200px;
-    height: 100px;
-    background-color: purple;
+body {
+    margin: 0;
 }
+
+.root {
+    display: flex;
+}
+
+.header {
+    background: #161415 url('../assets/images/header-background.jpg') no-repeat top center;
+    background-size: cover;
+    
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+
+
+    h2 {
+        color: white;
+    }
+}
+
