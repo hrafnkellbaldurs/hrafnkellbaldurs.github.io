@@ -31,10 +31,19 @@ module.exports = {
                             loader: 'css-loader',
                             options: {
                                 modules: true,
-                                localIdentName: '[name]-[local]__[hash:base64:6]'
+                                localIdentName: '[name]-[local]__[hash:base64:6]',
+                                importLoaders: 1
                             }
                         },
-                        'sass-loader'
+                        'sass-loader',
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                plugins: function() {
+                                    return [require('autoprefixer')]
+                                }
+                            }
+                        }
                     ]
                 }),
                 include: srcDir
