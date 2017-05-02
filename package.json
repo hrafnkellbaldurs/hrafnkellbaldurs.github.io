@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/webpack-dev-server",
-    "prod": "node_modules/.bin/webpack --progress --colors -p"
+    "dev": "webpack-dev-server",
+    "clean": "rm -rf ./dist",
+    "prod": "npm run clean && webpack --progress --colors -p"
   },
   "repository": {
     "type": "git",

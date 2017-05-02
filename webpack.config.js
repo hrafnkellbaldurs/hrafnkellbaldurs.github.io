@@ -2,12 +2,17 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var srcDir = path.join(__dirname, 'src');
+var paths = {
+    dist: path.join(__dirname, 'dist'),
+    src: path.join(__dirname, 'src')
+};
 
 module.exports = {
     entry: './src/index.js',
     output: { 
-        filename: 'bundle.js' 
+        path: paths.dist,
+        filename: 'bundle.js',
+        publicPath: paths.dist
     },
     module: {
         rules: [
@@ -18,7 +23,7 @@ module.exports = {
                     presets: ['es2015', 'react']
                 },         
                 loader: 'babel-loader',
-                include: srcDir 
+                include: paths.src 
             },
 
             // SCSS
@@ -46,14 +51,14 @@ module.exports = {
                         }
                     ]
                 }),
-                include: srcDir
+                include: paths.src
             },
 
             // FILES
             {
-                test: /\.(png|jpg)$/,
-                use: 'file-loader?name=[name].[ext]&outputPath=images/',
-                include: srcDir
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                use: 'file-loader?name=[name].[ext]&outputPath=images/&publicPath=./',
+                include: paths.src
             }
         ]
     },
