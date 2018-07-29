@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html --open",
     "prod": "npm run clean && parcel build index.html --public-url ./",
-    "predeploy": "npm run prod",
+    "predeploy": "npm install && npm run prod",
     "deploy": "gh-pages -d dist",
     "clean": "rm -rf ./dist"
   },
