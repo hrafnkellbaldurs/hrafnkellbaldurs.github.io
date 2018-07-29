@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --open --out-dir docs",
-    "prod": "npm run clean && parcel build index.html --public-url ./ --out-dir docs",
-    "clean": "rm -rf ./docs"
+    "start": "parcel index.html --open",
+    "prod": "npm run clean && parcel build index.html --public-url ./",
+    "clean": "rm -rf ./dist"
   },
   "repository": {
     "type": "git",
