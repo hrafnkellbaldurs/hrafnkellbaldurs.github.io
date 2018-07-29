@@ -1,0 +1,10 @@
+.container {
+    height: calc(100vh - 70px);
+    background: green;
+    border-bottom: solid black 1px;
+
+    &:first-child {
+        height: calc(100vh);
+    }
+}
+

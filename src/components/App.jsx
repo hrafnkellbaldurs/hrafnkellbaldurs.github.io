@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import styles from '../styles/App.scss';
-import TestContainer from '../containers/test-container.jsx';
+import HeaderContainer from '../containers/HeaderContainer';
+import Body from './Body';
+import { init } from '../scripts';
 
 export default class App extends Component {
+	componentDidMount() {
+		init();
+	}
+
 	render() {
 		return (
-			<div className={styles.root}>
-				<div className={styles.header}>
-					<h2>Hrafnkell Baldursson portfolio</h2>
-				</div>
-				<TestContainer />
+			<div className={styles.container}>
+				<HeaderContainer />
+				<Body />
 			</div>
 		);
 	}
