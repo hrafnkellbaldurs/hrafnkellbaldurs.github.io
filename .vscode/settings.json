@@ -1,0 +1,11 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "editor.formatOnSave": true,
+    // Indent lines with tabs
+    "prettier.useTabs": true,
+    // Number of spaces it should use per tab
+    "prettier.tabWidth": 2,
+    // If true, will use single instead of double quotes
+    "prettier.singleQuote": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true
+}
