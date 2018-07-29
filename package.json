@@ -7,7 +7,7 @@
     "start": "parcel index.html --open",
     "prod": "npm run clean && parcel build index.html --public-url ./",
     "predeploy": "npm install && npm run prod",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -b master",
     "clean": "rm -rf ./dist"
   },
   "repository": {
